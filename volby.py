@@ -18,7 +18,6 @@ def get_obce(web_address):
         tables = pd.read_html(web_address, encoding="UTF-8")
     except:
         ImportError
-        print("prvni except")
         return []
     listik = []
     print("Stahuji data z vybraneho webu: ", web_address)
@@ -61,7 +60,7 @@ def data_z_obci(obce, webovka):
         generovana_webovka = str(
             f"https://volby.cz/pls/ps2017nss/ps311?xjazyk=CZ&xkraj=" + kraj[1] + "&xobec=" + str(
                 obce[i]) + "&xvyber=" + vyber)
-        print( "|| iterace: ", i, "|| pocet obci: ", len(obce), "|| id obce: ", obce[i], "|| vygenerovany web: ", generovana_webovka)
+        print( "|| iterace: ", i, "|| pocet obci: ", len(obce), "|| id obce: ", obce[i], "|| vygenerovany URL: ", generovana_webovka)
         tables = pd.read_html(generovana_webovka, encoding="UTF-8")
         pocet_tabulek = len(tables)  # prvni tabulka obecne statistiky; druha a dalsi tabulky obsahuji nazvy po. stran
 
