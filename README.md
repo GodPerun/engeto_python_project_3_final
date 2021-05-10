@@ -4,9 +4,9 @@
 https://volby.cz/pls/ps2017nss/ps3?xjazyk=CZ
 
 ### Instalace:
-vytvorte si virtualni prostredi s pomoci requirements.txt.
-$ python3 -m venv .env
-$ source .env/bin/activate
+vytvorte si virtualni prostredi s pomoci requirements.txt.<br>
+$ python3 -m venv .env<br>
+$ source .env/bin/activate<br>
 $ pip3 install -r requirements.txt<br>
 ### Spousteni:
 Script potrebuje 2 vstupni argumenty, z uzemni urovne na vyse zminenem webu vyberte Obec (link v tabulce s "X"). Otevre se Vam nova
