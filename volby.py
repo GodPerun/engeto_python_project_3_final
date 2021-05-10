@@ -20,7 +20,6 @@ def get_obce(web_address):
         ImportError
         print("prvni except")
         return []
-
     listik = []
     print("Stahuji data z vybraneho webu: ", web_address)
     for i in range(len(tables)):
@@ -131,10 +130,7 @@ if __name__ == '__main__':
     nazev_csv = str(sys.argv[2])
     print(sys.argv[1], sys.argv[2])
     #nazev_csv = "volby.csv"
-    #url1 = "https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=2&xnumnuts=2101"
-    #url1 = "https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=6&xnumnuts=4203"
     #url1 = "https://volby.cz/pls/ps2017nss/ps311?xjazyk=CZ&xkraj=6&xobec=564591&xvyber=4203"
-    url2 = "https://volby.cz/pls/ps2017nss/ps311?xjazyk=CZ&xkraj=2&xobec=529303&xokrsek=6&xvyber=2101"
 
     seznam_obci = get_obce(url1)
     if not seznam_obci:
