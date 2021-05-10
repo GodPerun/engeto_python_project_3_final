@@ -18,6 +18,7 @@ def get_obce(web_address):
         tables = pd.read_html(web_address, encoding="UTF-8")
     except:
         ImportError
+        print("prvni except")
         return []
 
     listik = []
@@ -29,6 +30,7 @@ def get_obce(web_address):
             listik = listik + cislo_obce['Obec']['číslo'].tolist()
         except:
             KeyError
+            print("druhy except")
             return []
     try:
         while True:
